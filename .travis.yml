@@ -1,13 +1,10 @@
 language: php
 php:
-  - "5.2"
-
-branches:
-  only:
-    - devel
+  - "5.5"
 
 script:
   - phpunit --configuration tests/phpunit.xml --coverage-text
+  - phpunit  --log-junit shippable/testresults/junit.xml tests/
 
 notifications:
   email: false
