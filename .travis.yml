@@ -3,9 +3,8 @@ language: php
 php:
   - "5.2"
 
-branches:
-  only:
-    - devel
+git:
+  submodules: false  
 
 script:
   - phpunit --configuration tests/phpunit.xml --coverage-text
